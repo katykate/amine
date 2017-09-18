@@ -2,20 +2,16 @@
 
 <h1>Products</h1>
 
-
-
-<div class="container">
+<div class="container-fluid">
   <div class="row text-center">
     <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
+      <div class="col-sm-4 col-md-4 col-lg-3">
         <div class="card card-outline-warning mb-3 text-center">
           <div class="card-block">
           <ul class="list-group list-group-flush">
-            <%= image_tag(src="http://media.istockphoto.com/photos/kitten-on-a-white-background-picture-id511458158?k=6&m=511458158&s=170667a&w=0&h=YS27-I0nj5x89iDRUZ2YxE77hEghPb0HNCWwPCrMmn8=", class: "img-responsive") %>
+            <li class="list-group-item" id="image" ><%= image_tag(product.image_url, class: "img-fluid") rescue nil  %><li>
             <li class="list-group-item"><%= product.name %></li>
             <li class="list-group-item"><%= product.description %></li>
-            <li class="list-group-item"><%= product.color %></li>
-            <li class="list-group-item"><%= product.price %></li>
           </ul>
           </div>
         </div>
@@ -24,7 +20,7 @@
   </div>
 </div>
 
+<br>
 
 <%= link_to 'New Product', new_product_path %>
-  
     

@@ -12,6 +12,7 @@
             <li class="list-group-item" id="image" ><%= image_tag(product.image_url, class: "img-fluid") rescue nil  %><li>
             <li class="list-group-item"><%= product.name %></li>
             <li class="list-group-item"><%= product.description %></li>
+            <li class="list-group-item"><%= link_to "Show", product_path(id: product.id) %></li>
           </ul>
           </div>
         </div>

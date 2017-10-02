@@ -1,0 +1,141 @@
+@import "bootstrap";
+
+body {
+  font-family: 'Questrial', sans-serif;
+  font-size: 150%;
+}
+
+@media (max-width: 2500px) {
+	
+	.custom-navbar,
+	footer {
+		background-color: orange;
+	}
+
+  .custom-navbar .navbar-header {
+    float: left;
+    background-color: grey;
+    margin-right: 0px;
+  }
+
+  .custom-navbar .navbar-left,
+  .custom-navbar .navbar-right {
+    float: none !important;
+  }
+
+  .custom-navbar .navbar-toggle {
+    display: block;
+  }
+
+  .custom-navbar .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .custom-navbar.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+
+  .custom-navbar .navbar-collapse.collapse {
+    display: none!important;
+  }
+
+  .custom-navbar .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+
+  .custom-navbar .navbar-nav>li {
+    float: none;
+  }
+
+  .custom-navbar .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .custom-navbar .collapse.in {
+    display: block !important;
+  }
+
+  .custom-navbar .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+h1 {
+	color: grey;
+	font-size: 2em;
+}
+
+h1,
+h2,
+#show {
+	text-align:center;
+}
+
+h3 {
+	color: rgba(57, 156, 204, 0.8);
+}
+
+h1,
+h2,
+h3 {
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+p {
+	font-size: 1em;
+}
+
+.card {
+	border: 1px solid #ffc107;
+}
+
+ul {
+
+	list-style-type: none;
+}
+
+#carousel-example-generic {
+	
+	width: auto;
+  max-height: 700px;
+}
+
+.carousel-control.left, .carousel-control.right{ 
+    background: none !important;
+    filter: none !important;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+}
+
+#orderinput {
+	width: 50px;
+	border-radius: 4px;
+	margin: 5px;
+}
+
+#inlineFormCustomSelect {
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 320px;
+	height: 40px;
+}
+
+#quantity {
+	margin-top: 10px;
+
+}

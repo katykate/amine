@@ -10,10 +10,10 @@
           <div class="card-block">
           <ul class="list-group list-group-flush">
             <li class="list-group-item" id="image" ><%= image_tag(product.image_url, class: "img-fluid") rescue nil  %><li>
-            <li class="list-group-item"><%= product.name %></li>
+            <li class="list-group-item"><strong> <%= product.name %> </strong></li>
             <li class="list-group-item"><%= product.description %></li>
-            <li class="list-group-item"><%= product.colour %>Colour</li>
-            <li class="list-group-item"><%= product.price %><strong>$ 35</strong></li>
+            <li class="list-group-item"><%= product.colour %></li>
+            <li class="list-group-item"><strong> <%= product.price %> </strong></li>
             <li class="list-group-item"><%= link_to "Show", product %></li>
           </ul>
           </div>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+      <div class="col-sm-4 col-md-4 col-lg-3">
+        <div class="card card-outline-warning mb-3 text-center">
+          <div class="card-block">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="image" ><%= image_tag(product.image_url, class: "img-fluid") rescue nil  %><li>
+            <li class="list-group-item"><strong> <%= product.name %> </strong></li>
+            <li class="list-group-item"><%= product.description %></li>
+            <li class="list-group-item">Color: <%= product.colour %></li>
+            <li class="list-group-item"><strong>Price: <%= product.price %> </strong></li>
+            <li class="list-group-item"><%= link_to "Show", product %></li>
+          </ul>
+          </div>
+        </div>
+      </div><!-- /col -->
+    
+
+
+    

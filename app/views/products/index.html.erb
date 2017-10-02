@@ -12,8 +12,8 @@
             <li class="list-group-item" id="image" ><%= image_tag(product.image_url, class: "img-fluid") rescue nil  %><li>
             <li class="list-group-item"><strong> <%= product.name %> </strong></li>
             <li class="list-group-item"><%= product.description %></li>
-            <li class="list-group-item"><%= product.colour %></li>
-            <li class="list-group-item"><strong> <%= product.price %> </strong></li>
+            <li class="list-group-item">Color: <%= product.colour %></li>
+            <li class="list-group-item"><strong>Price: <%= product.price %> </strong></li>
             <li class="list-group-item"><%= link_to "Show", product %></li>
           </ul>
           </div>

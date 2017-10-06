@@ -1,0 +1,12 @@
+// _carousel.scss
+
+#carousel-example-generic {
+  
+  width: auto;
+  max-height: 700px;
+}
+
+.carousel-control.left, .carousel-control.right{ 
+    background: none !important;
+    filter: none !important;
+}

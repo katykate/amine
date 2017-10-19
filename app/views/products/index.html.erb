@@ -2,17 +2,22 @@
 
 <h1>Products</h1>
 
-<div class="container-fluid">
-  <div class="row text-center">
+<div class="container-fluid" >
+  <div class="row text-center" id="productmain">
     
     <% @products.each do |product| %>
 		<%= render product %>
 		<% end %>
-  
+	
+		<div class="butmain">
+			<button class="btn btn-basic btn-lg"><%= link_to 'New Product', new_product_path %></button>
+			<button class="btn btn-warning btn-lg"><%= link_to 'Carousel Gallery', static_pages_landing_page_path %></button>
+		</div>
+
   </div>
 </div>
 
-<br>
 
-<%= link_to 'New Product', new_product_path %>
+
+
     

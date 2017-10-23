@@ -1,0 +1,83 @@
+//_login.scss
+
+#logowanie {
+	margin-top: -30px;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(153,153,153,0.8);  
+}
+
+#login-dp b,
+  {
+	color: black;
+	font-size: 1.2em;
+}
+
+.text-right a {
+	color: blue;
+}
+
+#text-size {
+	font-size: 1.2em;
+}
+
+#login-dp .help-block{
+  ont-size:12px    
+}
+
+#login-dp .bottom{
+  border-top:1px solid #ddd;
+  clear:both;
+  padding:14px;
+}
+
+#login-dp .bottom b {
+	 color: blue;
+}
+
+#login-dp .social-buttons{
+  margin:12px 0    
+}
+#login-dp .social-buttons a{
+  width: 49%;
+}
+
+#login-dp .form-group {
+  margin-bottom: 10px;
+}
+
+.btn-fb{
+  color: #fff;
+  background-color:#3b5998;
+}
+
+.btn-fb:hover{
+  color: #fff;
+  background-color:#496ebc 
+}
+
+.btn-tw{
+  color: #fff;
+  background-color:#55acee;
+}
+
+.btn-tw:hover{
+  color: #fff;
+  background-color:#59b5fa;
+}
+
+@media (max-width:768px){
+  #login-dp{
+      background-color: rgba(153, 153, 153, 0.8);
+      color: #fff;
+  }
+}
+
+
+
+
+

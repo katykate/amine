@@ -3,7 +3,7 @@ class Product < ApplicationRecord
 		if Rails.env.development?
 	  	Product.where("LOWER(name) LIKE ?", "%#{search}%").take
 	  else
-	  	Product.where("LOWER(name) ILIKE ?", "%#{search}%").take
+	  	Product.where("LOWER(name) ilike ?", "%#{search}%").take
 		end
 	end
 end

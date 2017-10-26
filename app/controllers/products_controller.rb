@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
     else
       @products = Product.all
     end
@@ -65,7 +65,7 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

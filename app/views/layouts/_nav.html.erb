@@ -15,7 +15,6 @@
 	  <%= form.text_field :q, id: 'q', value: params[:q] %>
 	  <%= form.submit 'Search', class: 'btn btn-primary btn-lg' %>
   <% end %>
-    
 
 </div>
 
@@ -41,6 +40,17 @@
 			        <%= link_to "Orders", orders_path %>
 			      </li>
 	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+			<% if user_signed_in? %>
+			  <li>
+			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+			  </li>
+			<% else %>
+			  <li>
+			  <%= link_to('Login', new_user_session_path)  %>
+			  </li>
+			<% end %>
+		</ul>
 	</div>
 	   <!--/.nav-collapse -->
 </nav>	 

@@ -1,39 +1,38 @@
 <div class="container">
 
-<h1><%= @product.name %></h1>
+  <h1><%= @product.name %></h1>
 
-<div class="row" id="show" data-product-id="<%= @product.id %>">
+  <div class="row" id="show">
 
-  <div class="col-md-6 col-sm-12"><%= image_tag(@product.image_url, width: "350", class: "img-zoom img-responsive", data_zoom_image: @product.image_url) rescue nil %></div>
+    <div class="col-md-6 col-sm-12">
+      <center><%= image_tag(@product.image_url, width: "350", class: "img-zoom img-responsive",data_zoom_image: @product.image_url) rescue nil %></center>
 
-  <div class="col-md-6 col-sm-12">
-    <p id="notice"><%= notice %></p>
+      <p>
+        <%= @product.description %>
+      </p>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+      <p>
+        <strong>Color:</strong>
+        <%= @product.colour %>
+      </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+      <p>
+        <strong>Price: </strong>
+        <%= @product.price %>
+      </p>
 
-    <p>
-      <strong>Color:</strong>
-      <%= @product.colour %>
-    </p>
+      </div>
 
-    <p>
-      <strong>Price: </strong>
-      <%= @product.price %>
-    </p>
+      <div class="col-md-6 col-sm-12">
+
+        <%= render 'new_comment' %>  
+
+        <%= render 'comments' %>
+      </div>
 
   </div>
-  <%= link_to 'Edit and Update', edit_product_path %>
+  <%= link_to 'Back', products_path %>
+      <% link_to 'Edit', edit_product_path %>
 </div>
 
-</div>
-
-
-<%= link_to 'Back', products_path %>
+         

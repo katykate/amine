@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  
+  resources :products do
+    resources :comments
+  end
   resources :users
-  resources :products
+
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "registrations" }
   
   get 'static_pages/about'
 
@@ -19,5 +23,5 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :orders, only: [:index, :show, :create, :destroy]
-  
+
 end

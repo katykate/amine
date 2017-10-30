@@ -1,6 +1,17 @@
 
 <nav class="navbar navbar-default navbar-static-top custom-navbar" role="navigation" >
 
+<% if notice %>
+		<div id="notice_background">
+			<p class="notice"><%= notice %></p>
+		</div>
+	<% elsif alert %>
+		<div id="notice_background">
+			<p class="alert"><%= alert %></p>
+		</div>
+ <% end %>
+
+
 	<div class="container-fluid">
 
 	  <span class="h1" class="navbar-brand mb-0">Amine Ruby Project </span>
@@ -9,6 +20,8 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	    </button>
+
+
 
 		<%= form_with(url: products_path, method: 'get', local: true) do |form| %>
 	  <%= form.label :q, 'Search for:' %>

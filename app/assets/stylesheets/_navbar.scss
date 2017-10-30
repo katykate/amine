@@ -1,5 +1,23 @@
 // _navbar.scss
 
+#notice_background {
+  background-color: grey;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border: none;
+  margin-left: -10px;
+  .alert, .notice {
+    padding:  3.8rem 3.8rem;
+    text-align: center;
+    margin: 0;
+    font-size: 1.3 em;
+    font-weight: 700;
+    color: orange;
+    letter-spacing: 1px;
+  }
+}
+
 @media (max-width: 2500px) {
   
   .custom-navbar,

@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   end
   resources :users
 
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "registrations" }
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registration => "registrations" }
   
+  devise_for :users,
+  :skip => [:registrations, :sessions]
+
+
   get 'static_pages/about'
 
   get 'static_pages/contact'

@@ -6,6 +6,9 @@
   margin-top: 1%;
 }
 
+.container {
+  margin-bottom: 30px;
+}
  body {
   font-family: 'Questrial', sans-serif;
   font-size: 150%;
@@ -38,7 +41,7 @@ p {
 }
 
 a {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 footer {
@@ -54,3 +57,9 @@ footer {
   margin: 3px;
   height: 50px;
 }
+
+.pagination {
+  display: block;
+  
+}
+

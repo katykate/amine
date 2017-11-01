@@ -22,19 +22,21 @@
       </p>
 
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-      
+
       </div>
 
       <div class="col-md-6 col-sm-12">
 
         <%= render 'new_comment' %>  
-
         <%= render 'comments' %>
-      </div>
 
+      </div>
+<% if signed_in? && current_user.admin? %>      
+  <%= link_to 'Edit', edit_product_path %>
+<% end %>
   </div>
-  <%= link_to 'Back', products_path %>
-      <% link_to 'Edit', edit_product_path %>
+
+  
 </div>
 
          

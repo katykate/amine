@@ -23,6 +23,12 @@
 
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path, class: 'btn btn-success btn-lg' %>
+      <% else %>
+        <%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
+      <% end %>
+
       </div>
 
       <div class="col-md-6 col-sm-12">
@@ -32,12 +38,8 @@
 
       </div>
 
-
   </div>
+</div>  
 
-
-  </div>
-  
-</div>
 
          

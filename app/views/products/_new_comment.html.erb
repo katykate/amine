@@ -1,5 +1,4 @@
 
-
 <% if signed_in? %>
   <h2>Add a review:</h2>
 
@@ -7,11 +6,11 @@
 
     <h3>
       <%= f.label :body, "Comments" %><br>
-      <%= f.text_area :body, autofocus: true, required: true, class: "form-control", cols: "75", rows: "7" %>
+      <%= f.text_area :body, autofocus: true, required: true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', class: "form-control", cols: "75", rows: "7" %>
     </h3>
 
     <h3>
-      <%= f.label :rating %><br>
+      <%= f.label :rating, autofocus: true, required: true %><br>
     </h3> 
     
     <p>
@@ -19,10 +18,7 @@
       </div>
     </p>
      
-    
-
   <%= f.submit "Submit", class: "btn btn-default btn-primary btn-lg" %>
     
-
   <% end %>
 <% end %>

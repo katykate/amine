@@ -1,10 +1,9 @@
 <div class="container">
 
-  <h1><%= @product.name %></h1>
-
   <div class="row" id="show">
 
     <div class="col-md-6 col-sm-12">
+    <h3><%= @product.name %></h3>
       <center><%= image_tag(@product.image_url, width: "350", class: "img-zoom img-responsive",data_zoom_image: @product.image_url) rescue nil %></center>
 
       <p>
@@ -20,8 +19,10 @@
         <strong>Price: </strong>
         <%= @product.price %>
       </p>
-
+      <hr style="width: 50%;">
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <hr style="width: 50%;">
+      <p>Highest Rating: <div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p><hr style="width: 50%;"><p>Lowest Rating: <div class="rated" data-score="<%= @product.lowest_rating_comment.try(:rating) %>"></div></p>
 
       <% if signed_in? && current_user.admin? %>
         <%= link_to 'Edit', edit_product_path, class: 'btn btn-success btn-lg' %>

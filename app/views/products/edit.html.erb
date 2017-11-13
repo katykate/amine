@@ -1,24 +1,27 @@
-<div class="container">
-	<div id="notice_background">
-		<p class="alert"><%= alert %>You have no access to see that page</p>
-	</div>
-	<%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
-</div>
 <% if signed_in? && current_user.admin? %>
+
 <h1>Editing Product</h1>
 <div class="container">
 	<div class="row">
     <div class="col-md-6 col-sm-6">
-		
-
+	
 		<%= render 'form', user: @user %>
-
-
 		</div>
 	</div>
+</div>
 
 	<%= link_to 'Show', @product %> |
-	<%= link_to 'Back', products_path %> 
-</div>
+	<%= link_to 'Back', products_path %> 	
+
+<% else %>
+
+  <div id="notice_background">
+    <p class="alert"><%= alert %>You have no access to see that page</p>
+  </div>
+
+  <%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
+
+
 <% end %>
-</div>	
+
+	

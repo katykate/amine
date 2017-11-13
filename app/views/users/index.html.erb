@@ -1,4 +1,10 @@
-
+<div class="container">
+<div id="notice_background">
+  <p class="alert"><%= alert %>You have no access to see that page</p>
+</div>
+  <%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
+</div>
+<% if signed_in? && current_user.admin? %>
 <h1>Users</h1>
 
 <div class="container">
@@ -29,5 +35,5 @@
 <div id="back_button"> 
     <%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
 </div>
-
 </div>
+<% end %>

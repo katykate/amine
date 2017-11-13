@@ -16,7 +16,7 @@
         <%= form.label :email, "Email Address" %>
         <%= form.text_field :email, autofocus: true, required: true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', class: "form-control",placeholder: "Enter Email" %>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="textfield">
         <%= form.label :message %>
         <%= form.text_area :message, autofocus: true, required: true, class: "form-control", placeholder: "Enter Message", cols: "75", rows: "7", minlength: 20 %>
       </div>   

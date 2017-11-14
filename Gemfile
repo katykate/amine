@@ -41,6 +41,7 @@ end
 # gem 'capistrano-rails', group: :development
 gem 'nodejs-rails', '~> 0.0.1'
 gem 'webpacker', '~> 3.0'
+
 group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +49,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do

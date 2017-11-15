@@ -17,11 +17,8 @@ class Product < ApplicationRecord
 	end
 
 	def self.search(search_term)
-		if 
-	  	Product.where("name LIKE ?", "%#{search_term}%").take
-	  else
-	  	@products = Product.all
-		end
+  	Product.where("name ILIKE ?", "%#{search_term}%")
 	end
+
 end
 

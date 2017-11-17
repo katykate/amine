@@ -17,7 +17,11 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require turbolinks
+//= require lightbox
+//= require fancybox
+//= require chosen-jquery
 //= require_tree .
+//+ require products
 //= require_tree ../../../vendor/assets/javascripts
 
 

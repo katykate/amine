@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.0.0.alpha3'
-
+gem 'stripe'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
@@ -41,6 +41,9 @@ end
 # gem 'capistrano-rails', group: :development
 gem 'nodejs-rails', '~> 0.0.1'
 gem 'webpacker', '~> 3.0'
+gem 'lightbox2-rails'
+gem 'fancybox2-rails'
+gem 'chosen-rails'
 
 group :development, :test do
   gem 'sqlite3'
@@ -50,8 +53,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do

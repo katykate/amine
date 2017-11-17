@@ -7,9 +7,9 @@
 
 	    <label class="mr-sm-2" for="inlineFormCustomSelect"><h3>Preference</h3></label>
 
-	    <select class="custom-select mb-6 mr-sm-6 mb-sm-0" id="inlineFormCustomSelect">
-	      <option >Select product</option>
-	      <option ><%= product.name %></option>
+	    <select data-placeholder="Choose product..." style="width:350px;" standard class="chosen-select" id="inlineFormCustomSelect">
+	      <option>Select product</option>
+	      <option><%= product.name %></option>
 	    </select>
 
 	   	</form >
@@ -26,5 +26,9 @@
 	  <div id="back_button"> 
     	<%= link_to 'Back', products_path, class: 'btn btn-success btn-lg' %>
 		</div>
+
+		<form id="filters">
+  
+</form>
 
 </div>

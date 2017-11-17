@@ -5,5 +5,5 @@ $(document).ready(function(){
 		$('#notice_background').fadeOut("slow",function(){
 		})
 	}, 1500);	
-});
 
+});

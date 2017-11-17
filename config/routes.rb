@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+
+
   resources :products do
     resources :comments
   end
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   devise_for :users,
   :skip => [:registrations, :sessions]
 
+  post 'payments/create'
 
   get 'static_pages/about'
 
@@ -24,6 +26,7 @@ Rails.application.routes.draw do
 	post 'static_pages/thank_you'
 
   root 'products#index'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :orders, only: [:index, :show, :create, :destroy]

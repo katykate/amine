@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
   
   
   # GET /users
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
   def show
     
   end
+
 
   # GET /users/new
   def new
@@ -35,9 +37,11 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
+        
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        
       end
     end
   end
@@ -76,5 +80,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name)
     end
-  
+
 end

@@ -15,16 +15,18 @@ describe UsersController, type: :controller do
         sign_in user1
       end
 
+        it 'does not load second user page' do
+           get :show, params: { id: user2.id }
+           expect(response.status).to eq 302
+           expect(response).to redirect_to(root_path) 
+        end
+
         it 'loads correct user details' do
           get :show, params: { id: user1.id }
           expect(response.status).to eq 200
           expect(assigns(:user)).to eq user1
         end
 
-        it 'does not load the second user' do
-           get :show, params: { id: user1.id }
-           expect(response.status).to eq 200
-        end
      end
 
      context 'when a user is not logged in' do

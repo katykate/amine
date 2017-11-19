@@ -24,6 +24,10 @@ Rails.application.routes.draw do
 
 	post 'static_pages/thank_you'
 
+  get 'static_pages/index'
+
+  get 'products/index'
+
   root 'products#index'
 
 

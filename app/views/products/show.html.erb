@@ -2,9 +2,10 @@
 
   <div class="row" id="show">
 
+<% cache @product do %>
     <div class="col-md-6 col-sm-12">
     <h3><%= @product.name %></h3>
-    
+   
       <center><%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %></center>
 
       <p>
@@ -20,6 +21,7 @@
         <strong>Price: </strong>
         <%= @product.price %>
       </p>
+
 
       <%= form_with(url: '/payments/create') do |form| %>
       <%= render partial: "shared/stripe_checkout_button" %>
@@ -46,7 +48,7 @@
         <%= render 'comments' %>
 
       </div>
-
+<% end %>
   </div>
 </div>  
 

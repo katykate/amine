@@ -20,7 +20,9 @@ var refreshRating = function() {
 $(document).on('turbolinks:load', function() {
     refreshRating(); 
 
-$('.img-zoom').elevateZoom({zoomType: "lens",
-  lensShape : "rectangle", lensSize: 200});
+$('.img-zoom').elevateZoom({
+  zoomType        : "inner",
+  cursor: "crosshair"
+});
 
 });

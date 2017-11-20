@@ -19,7 +19,7 @@ end
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
-    
+    @product.viewed!
   end
 
   # GET /products/new
@@ -36,6 +36,7 @@ end
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    logger.debug "Product: #{@product.name}"
 
     respond_to do |format|
       if @product.save

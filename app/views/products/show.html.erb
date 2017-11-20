@@ -13,7 +13,13 @@
       <hr style="width: 50%;">
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
       <hr style="width: 50%;">
-      <br>
+      <br>    
+  <h3 class="views"> Views:
+    <span class="badge">
+      <%= @product.views %>
+    </span>
+  </h3>
+<br>
       <% if signed_in? && current_user.admin? %>
         <%= link_to 'Edit', edit_product_path, class: 'btn btn-outline-primary btn-lg' %>
       <% else %>

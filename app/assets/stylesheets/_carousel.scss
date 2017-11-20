@@ -1,12 +1,82 @@
 // _carousel.scss
 
 #carousel-example-generic {
+  width: 100%;
+  max-height: 1150px;
+
+}
+
+#karuzel {
+  margin-top: -5px;
+  margin-righ: -15px;
+  background-size: cover;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+  padding-right: 0px;
+  margin-righ: 0px;
   
-  width: auto;
-  max-height: 700px;
 }
 
 .carousel-control.left, .carousel-control.right{ 
     background: none !important;
     filter: none !important;
+}
+
+.carousel-caption h4 {
+	color: rgba(57, 156, 204, 0.8);
+	font-size: 15rem;
+}
+
+.carousel-caption {
+	width: 75%;
+  height: 47.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+h4 {
+  
+  position: absolute;
+  left: 25rem;
+  top: 5rem;
+  opacity: 0;
+  animation-name: topFadeOut;
+  animation-duration: 5s;
+  color: white;
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 966px) { 
+
+  .carousel-caption h4 {
+  font-size: 6rem;
+  }
+  h4 {
+    position: absolute;
+    left: 1rem;
+    top: 8rem;
+  }
 }

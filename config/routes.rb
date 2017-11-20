@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   
   devise_for :users,
   :skip => [:registrations, :sessions]
+  resources :orders, only: [:index, :show, :create, :destroy]
 
-  post 'payments/create'
-
+  
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -28,10 +28,11 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-  root 'products#index'
+  post 'payments/create'
 
+  get  'thanks', to: 'payments#create', as: 'thanks'
 
+  root 'static_pages#landing_page'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :orders, only: [:index, :show, :create, :destroy]
 
 end

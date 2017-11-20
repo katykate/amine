@@ -22,6 +22,7 @@
 //= require chosen-jquery
 //= require_tree .
 //+ require products
+//= require jquery.tubular.1.0
 //= require_tree ../../../vendor/assets/javascripts
 
 

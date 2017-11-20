@@ -21,9 +21,6 @@ $(document).on('turbolinks:load', function() {
     refreshRating(); 
 
 $('.img-zoom').elevateZoom({zoomType: "lens",
-  lensShape : "round", lensSize: 300});
-
-$(".chosen-select").chosen({no_results_text: "Oops, nothing found!"}); 
-$(".chosen-select").chosen({width: "85%"}); 
+  lensShape : "rectangle", lensSize: 200});
 
 });

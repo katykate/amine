@@ -1,4 +1,5 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div class="container-fluid" id="karuzel">
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <% @products.each_with_index do |product, i| %>
@@ -10,10 +11,10 @@
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
 	    <div class="item<%= " active" if product == @products.first %>">
-	      <center><%= image_tag(product.image_url) %></center>
+	      <%= image_tag(product.image_url) %>
 	      <div class="carousel-caption">
-	        <p><%= product.name %></p>
-	      </div>
+	        <h4><%= product.name %></h4>
+	      </div>     
 	    </div>
 	  <% end %>
   </div>
@@ -27,7 +28,7 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-
+</div>
 </div>
 
 

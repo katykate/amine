@@ -9,10 +9,24 @@
 	padding-bottom: 5px;
 }
 
+li {
+	color: grey;
+	text-decoration: none;
+}
+
+#name-text {
+	color: rgba(57, 156, 204, 0.8);
+}
+
 ul {
 	list-style-type: none;
 }
 
 #show {
 	margin-bottom: 60px;
+}
+
+a,
+a:hover {
+	text-decoration: none;
 }

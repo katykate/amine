@@ -21,11 +21,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-	get 'static_pages/landing_page'
+  get 'static_pages/landing_page'
 
-	get 'orders/index'
+  get 'orders/index'
 
-	post 'static_pages/thank_you'
+  post 'static_pages/thank_you'
 
   get 'static_pages/index'
 

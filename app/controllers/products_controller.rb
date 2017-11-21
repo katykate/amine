@@ -36,7 +36,7 @@ end
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    logger.debug "Product: #{@product.name}"
+    #logger.debug "Product: #{@product.name}"
 
     respond_to do |format|
       if @product.save
@@ -68,7 +68,7 @@ end
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_path, notice: 'Product was successfully destroyed.' }
+      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end 

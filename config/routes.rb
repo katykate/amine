@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+
   resources :users
 
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registration => "registrations" }
   
   devise_for :users,
   :skip => [:registrations, :sessions]
+  
   resources :orders, only: [:index, :show, :create, :destroy]
 
   mount ActionCable.server => '/cable'

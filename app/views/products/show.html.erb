@@ -4,7 +4,7 @@
 <div class="row" data-product-id="<%= @product.id %>"> 
   <div class="col-md-12 col-sm-12" id="show">
   <div class="col-md-6">
-    <br>
+  <br>
     <%= image_tag(@product.image_url, width: "400", class: "img-zoom", data_zoom_image: @product.image_url)%>
     <br>
     <br>
@@ -49,18 +49,16 @@
   </div>    
   </div>
 </div>        
-        <!--<%= render 'new_comment' %>-->
-  <div class="row" id="paginating">
-    <div class="col-md-12">   
-      <div class="card card-outline-secondary my-4">
-      <div class="card-header">
-        Product Reviews
-      </div>
-      <%= render 'comments' %>
-      </div>
-    </div>
+<div class="row" id="paginating">
+  <div class="col-md-12">   
+  <div class="card card-outline-secondary my-4">
+  <div class="card-header">
+  Product Reviews
   </div>
-
+  <%= render 'comments' %>
+  </div>
+  </div>
+  </div>
 </div>
   
  

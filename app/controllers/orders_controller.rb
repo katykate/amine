@@ -1,8 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+before_action :authenticate_user!
+before_action :admin_only
 
-  def index
-    @products = Product.all
+  def index    
+    @orders = Order.all
   end
 
   def show
@@ -14,10 +15,19 @@ class OrdersController < ApplicationController
   def create
   end
 
-  def destroy
+  def destryoy
   end
 
-  def product_params
-    params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+  private
+
+  def admin_only
+    authenticate_user!
+    if current_user.admin
+      return
+    else
+      flash[:notice] = "I'm sorry, that page is for the Admin only."
+      redirect_to root_path
+    end
   end
+
 end

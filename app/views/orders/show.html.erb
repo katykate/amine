@@ -1,1 +1,28 @@
-<h1> Orders - Show </h1>
+<div class="container">
+
+<h1><%="Order #{@order.id}" %></h1>
+
+<p>
+  <strong>Order Number:</strong>
+  <%= @order.id %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @order.user_id %>
+</p>
+
+<p>
+  <strong>Product ID:</strong>
+  <%= @order.product_id %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @order.total %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order), class: 'btn btn-warning' %> |
+<%= link_to 'Back', orders_path, class: 'btn btn-danger' %>
+
+</div>

@@ -1,0 +1,7 @@
+<div class="col-md-4">
+  <%= link_to "Order Number #{order["id"]}", order, class: 'h1' %>
+  <p>User Number <%= order["user_id"] %></p>
+  <p>Product Number <%= order["product_id"] %></p>
+  <p>£ <%= order["total"] %></p>
+  <p><% if signed_in? && current_user.admin? %><%= link_to 'Edit', edit_order_path(order) %> <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
+</div>

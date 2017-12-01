@@ -4,18 +4,18 @@
 
 <div class="container-fluid" >
   <div class="row text-center" id="productmain">
-  <% cache(cache_key_for_products) do %>  
-  <% @products.each do |product| %>
-	<%= render product %>
-	<% end %>
-	<% end %>
-	<div class="butmain">
-	<% if signed_in? && current_user.admin? %>
-	<button class="btn btn-warning btn-lg"><%= link_to 'New Product', new_product_path %></button>
-	<% end %>
-	<button class="btn btn-warning btn-lg"><%= link_to 'Carousel Gallery', static_pages_landing_page_path %></button>
-  <button class="btn btn-success btn-lg"><%= link_to 'Back', products_path %></button>
-	</div>	
+		<% cache(cache_key_for_products) do %>  
+		  <% @products.each do |product| %>
+			<%= render product %>
+			<% end %>
+		<% end %>
+		<div class="butmain">
+		<% if signed_in? && current_user.admin? %>
+			<button class="btn btn-warning btn-lg"><%= link_to 'New Product', new_product_path %></button>
+			<% end %>
+			<button class="btn btn-warning btn-lg"><%= link_to 'Carousel Gallery', static_pages_landing_page_path %></button>
+		  <button class="btn btn-success btn-lg"><%= link_to 'Back', products_path %></button>
+		</div>	
 	</div>	
 </div>
 

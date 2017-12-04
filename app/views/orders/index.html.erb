@@ -1,13 +1,18 @@
-<div class="container">
 <h1> Orders </h1>
 
-<!--<div class="row">
-  <%= link_to 'New Order', new_order_path, class: 'btn btn-primary btn-lg pull-right' %>
-</div>-->
-<br>
-
-<div class="row">
-  <%= render @orders %>
+<div class="container">
+	<div class="row" id="orders">
+		<% @orders.each do |order| %>
+	    <div class="col-lg-offset-3 col-md-offset-3 col-md-3 order_div">
+	    	<hr>
+	      <h3> User ID: <%= order.user_id %></h3>
+	      <hr>
+	      <p> Product: </p><h3><%= order.product.name %></h3>
+	      <p> Total: <h3>£<%= order.total %></h3></p>
+	    </div>
+    <% end %>
+   </div>
 </div>
 
-</div>
+
+  

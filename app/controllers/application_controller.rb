@@ -1,14 +1,9 @@
 class ApplicationController < ActionController::Base
-  	protect_from_forgery with: :exception
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :null_session
 
-	  rescue_from CanCan::AccessDenied do |exception|
-	  redirect_to products_index_path, notice: exception.message
-	end
-
-	def redirect_if_no_user
-    if current_user.nil?
-      redirect_to root_path
-    end
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
   end
-
 end

@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
 skip_before_action :verify_authenticity_token
+before_action :authenticate_user!
 
 def create
   token = params[:stripeToken]
@@ -18,7 +19,7 @@ def create
       Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
     end
 
-    flash[:success] = "Payment processed successfully"
+    flash[:notice] = "Your Order has been successfully placed! Thank you for your purchase."
   rescue Stripe::CardError => e
     # The card has been declined
     body = e.json_body

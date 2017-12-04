@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   protect_from_forgery with: :null_session
   respond_to :json, :html
 
@@ -10,7 +11,7 @@ class OrdersController < ApplicationController
       @orders = current_user.orders
     end
   end
-  
+
   def show
   end
 
